@@ -3,10 +3,13 @@ class APIHandler {
     this.BASE_URL = baseUrl;
   }
 
+  
+
   getFullList () {
-    return axios.get(this.BASE_URL + '/characters')
+  
+  return axios.get(this.BASE_URL + '/characters')
     .then(results => {
-      return results
+      return results.data
     })
     .catch(err => {
       console.log(err)
@@ -15,6 +18,7 @@ class APIHandler {
 
   getOneRegister () {
 
+    
   }
 
   createOneRegister () {
