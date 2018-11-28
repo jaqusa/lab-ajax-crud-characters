@@ -4,7 +4,13 @@ class APIHandler {
   }
 
   getFullList () {
-
+    return axios.get(this.BASE_URL + '/characters')
+    .then(results => {
+      return results
+    })
+    .catch(err => {
+      console.log(err)
+    })
   }
 
   getOneRegister () {
